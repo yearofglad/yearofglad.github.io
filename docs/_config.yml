@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Ben Fu
-email: hello@benhfu.com
+email: hello@benhfu[dot]com
 description: >- # this means to ignore newlines until "baseurl:"
   Testing blog posts shjdahagkfhgkjdsghdjkasgafdkhjafgdskhdsagfkjdfs
   fjkhsalfalkhsadfklhdsfjlkadfshlkdsahjldkashdlsfak
