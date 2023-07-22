@@ -29,7 +29,8 @@ twitter_username: no
 github_username: yearofglad
 
 # Build settings
-theme: minima
+# theme: minima
+# removed gem-based theme 
 favicon: /favicon.png 
 plugins:
   - jekyll-feed
