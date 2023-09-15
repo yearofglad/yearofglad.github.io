@@ -1,5 +1,36 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter (the dashes are enough) oh i see
 ---
 
+@font-face {
+    font-family: "pp_mondwestregular";
+    src: url("fonts/ppmondwest-regular-webfont.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "pp_moriregular";
+    src: url("fonts/ppmori-regular-webfont.woff2") format('woff2'),
+}
+
+@font-face {
+    font-family: "pp_morisemibold";
+    src: url("fonts/ppmori-semibold-webfont.woff2") format('woff2'),
+}
+
+
+
 @import "minima";
+
+
+body {
+	font-family: "pp_moriregular", sans-serif;
+}
+
+header {
+	font-family: "pp_mondwestregular", sans-serif; 
+}
+
+.bold-text {
+  font-family: "pp_morisemibold", sans-serif;
+  font-weight: bold;
+}

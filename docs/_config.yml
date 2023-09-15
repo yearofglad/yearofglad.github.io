@@ -18,22 +18,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ben Fu
-email: hello@benhfu[dot]com
+title: BEN FU
+# email: hello@benhfu[dot]com
 description: >- # this means to ignore newlines until "baseurl:"
   Testing blog posts shjdahagkfhgkjdsghdjkasgafdkhjafgdskhdsagfkjdfs
   fjkhsalfalkhsadfklhdsfjlkadfshlkdsahjldkashdlsfak
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://yearofglad.github.io # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: no 
-github_username: yearofglad
+url: https://benhfu.com # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: no 
+# github_username: yearofglad
 
 # Build settings
 # theme: minima
 # removed gem-based theme 
 favicon: /favicon.png 
+header_pages:
+  - about.md
+  - projects.md 
+
 plugins:
-  - jekyll-feed
+ # - jekyll-feed
   - jekyll-seo-tag
 
 # Exclude from processing.
