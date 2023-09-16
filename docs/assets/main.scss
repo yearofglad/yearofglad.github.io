@@ -17,6 +17,10 @@
     src: url("fonts/ppmori-semibold-webfont.woff2") format('woff2'),
 }
 
+@font-face {
+    font-family: "hzk_pixel_16px" ; 
+    src: url("fonts/hzk-pixel-16px.woff2") format('woff2"'), 
+}
 
 
 @import "minima";
@@ -27,7 +31,7 @@ body {
 }
 
 header {
-	font-family: "pp_mondwestregular", "GB18030 Bitmap", sans-serif; 
+	font-family: "pp_mondwestregular", "GB18030 Bitmap", "hzk_pixel_16px" serif; 
 }
 
 .bold-text {
