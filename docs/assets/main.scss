@@ -17,9 +17,10 @@
     src: url("fonts/ppmori-semibold-webfont.woff2") format('woff2'),
 }
 
+// wasting a lot of space by including this backup mobile chinese character font bruh
 @font-face {
     font-family: "hzk_pixel_16px" ; 
-    src: url("fonts/hzk-pixel-16px.woff2") format('woff2"'), 
+    src: url("fonts/hzk-pixel-16px.woff2") format('woff2'), 
 }
 
 
