@@ -5,7 +5,8 @@
   border-top: 60px solid $background-color;
   border-bottom: 1px solid $background-color;
   //padding-left: -100px ; 
-  border-right: 200px solid $background-color ; 
+  padding-right: 200px ;
+  //border-right: 200px solid $background-color ; 
   min-height: $spacing-unit * 3;
   max-height: $spacing-unit * 3;
   flex-wrap: wrap ; 
@@ -111,9 +112,9 @@
  * Site footer
  */
 .site-footer {
-  border-right: 200px solid $background-color ; 
+  //border-right: 200px solid $background-color ;
   border-top: 4px dotted white;
-  padding: $spacing-unit 0;
+  padding-right: 200px ;
 }
 
 .footer-heading {
@@ -183,6 +184,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  padding-right: 200px ; 
   flex: 1;
 }
 
