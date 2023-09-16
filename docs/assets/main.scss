@@ -29,6 +29,17 @@
 
 }
 
+::selection {
+    background-color: #ea3538 ; 
+    color: #000000 ; 
+    //text-shadow: 3px 2px 0px #000000 ; 
+    //color: ; 
+}
+
+:focus {
+    outline: 2px solid #ea3538; /* Change to your desired color */
+}
+
 // fonts 
 
 @font-face {
