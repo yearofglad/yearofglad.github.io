@@ -29,10 +29,19 @@
 
     <div class="max-w-5xl mx-auto px-6 ">
                 <div class="mt-24">
-                    <h3 class="text-xl italic font-serif mb-4">Contact</h3>
-                    <p class="text-lg text-gray2 my-4">Testing'!</p>
+                    <h2 class="text-xl italic font-serif mb-4">Contact me</h2>
+                    <p class="text-lg text-gray2 my-4">Email me at <a id="email-link" href="#">bhf2117[at]columbia[dot]edu</a> or connect with me on <a href="https://www.linkedin.com/in/benhfu/" target="_blank" rel="noopener noreferrer">Linkedin</a>.</p>
                 </div>
 
   </div>
+
+  <!-- waging war on those stupid SEO bots -->
+  <script>
+  var user = 'bhf2117';
+  var domain = 'columbia';
+  var element = document.getElementById('email-link');
+  element.href = 'mailto:' + user + '@' + domain + '.edu';
+</script>
+  
 
 </footer>
