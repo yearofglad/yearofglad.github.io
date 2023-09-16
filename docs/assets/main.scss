@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough) oh i see
+# Only the main Sass file needs front matter (the dashes are enough) oh I see
 ---
 
 @font-face {
@@ -27,10 +27,14 @@ body {
 }
 
 header {
-	font-family: "pp_mondwestregular", sans-serif; 
+	font-family: "pp_mondwestregular", "GB18030 Bitmap", sans-serif; 
 }
 
 .bold-text {
   font-family: "pp_morisemibold", sans-serif;
   font-weight: bold;
+}
+
+.chinese-character {
+    font-size: 56px ; 
 }

@@ -1,13 +1,25 @@
 ---
 layout: default
 ---
+<head>
+</head>
 
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+  <img class = "head image" 
+       src="{{ site.baseurl }}/assets/GREENBENFU.jpeg" 
+       alt="Green Ben Fu"
+       width = 450px >
+
+<!--  <img src="path/to/your/image.jpg" alt="Your Image Description" style="margin-top: 20px; margin-left: 50px;" -->
+
+
   {{ content }}
+
+
 
 <!--   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
