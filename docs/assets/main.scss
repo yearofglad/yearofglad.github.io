@@ -51,6 +51,44 @@ p a {
     text-decoration: underline ; 
 }
 
+//navbar 
+
+/* Remove bullet points from navbar */
+.site-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 50;
+    display: flex; /* Makes list items sit in a row */
+
+
+}
+
+.site-nav li {
+    margin-right: 40px; /* Adds spacing between navbar items */
+    margin-top: 5px ; 
+}
+
+/* You may also want to style the navbar links */
+.site-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s; /* Smooth color transition on hover */
+    font-size: 50px ;
+}
+
+.site-nav a:hover {
+    color: #ffffff; /* Change this color to whatever you'd like for hover */
+    text-shadow: 3px 2px 0px #123030 ; 
+    text-decoration: none ; 
+}
+
+// /* If you want to position the nav to the right of your site title */
+// .wrapper {
+//     display: flex;
+//     justify-content: space-between; /* Separates site title and nav */
+//     align-items: center; /* Vertically centers items */
+// }
+
 // fonts 
 
 @font-face {

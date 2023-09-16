@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Testing blog posts shjdahagkfhgkjdsghdjkasgafdkhjafgdskhdsagfkjdfs
   fjkhsalfalkhsadfklhdsfjlkadfshlkdsahjldkashdlsfak
 baseurl: "" # the subpath of your site, e.g. /blog
+# permalink: /:title
 url: https://benhfu.com # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: no 
 # github_username: yearofglad
@@ -39,6 +40,15 @@ header_pages:
 plugins:
  # - jekyll-feed
   - jekyll-seo-tag
+
+seo: 
+  title: Ben Fu
+  description: Ben Fu 
+
+nav:
+  - label: About
+    page: /about/ 
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

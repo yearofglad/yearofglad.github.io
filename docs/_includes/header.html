@@ -6,7 +6,7 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
-    {%- if page_paths -%}
+    <!-- {%- if page_paths -%}
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -19,13 +19,51 @@
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            <a class="page-link" href="/your-page-url/">Your Page Name</a>
+             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            <!-- <a class="page-link" href="/about/">About</a> -->
 
             {%- endif -%}
           {%- endfor -%}
         </div>
       </nav>
-    {%- endif -%}
+    {%- endif -%} -->
+
+    <!-- <ul>
+  {% assign mypages = site.pages | sort: "order" %}
+    {% for page in mypages %}
+    <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul> -->
+
+ <!--  <nav class="site-nav">
+    <ul>
+        {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <li>
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            </li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</nav> -->
+
+<nav class="site-nav">
+    <ul>
+        <li>
+            <a class="page-link" href="/About/">About</a>
+            <a class="page-link" href="/blog.html/">Posts</a>
+            <!-- <a class="page-link" href="/Projects/">Projects</a> -->
+        </li>
+        {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+            <li>
+                <a class="page-link" href="{{ /about/ | relative_url }}">{{ my_page.title | escape }}</a>
+            </li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</nav>
   </div>
 </header>
