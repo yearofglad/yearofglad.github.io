@@ -80,8 +80,12 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: #ffffff;
       }
+    }
+
+    ul {
+      float: right ; 
     }
 
     input ~ .trigger {
@@ -113,7 +117,7 @@
  */
 .site-footer {
   //border-right: 200px solid $background-color ;
-  border-top: 4px dotted white;
+  border-top: 3px dotted white;
   padding-right: 200px ;
   padding-top: 50px ; 
 }

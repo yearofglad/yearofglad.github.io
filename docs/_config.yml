@@ -21,8 +21,7 @@
 title: BEN FU 傅昊
 # email: hello@benhfu[dot]com
 description: >- # this means to ignore newlines until "baseurl:"
-  Testing blog posts shjdahagkfhgkjdsghdjkasgafdkhjafgdskhdsagfkjdfs
-  fjkhsalfalkhsadfklhdsfjlkadfshlkdsahjldkashdlsfak
+  早上好
 baseurl: "" # the subpath of your site, e.g. /blog
 # permalink: /:title
 url: https://benhfu.com # the base hostname & protocol for your site, e.g. http://example.com
@@ -33,9 +32,9 @@ url: https://benhfu.com # the base hostname & protocol for your site, e.g. http:
 # theme: minima
 # removed gem-based theme 
 favicon: /favicon.png 
+
 header_pages:
-  - about.md
-  - projects.md 
+  - /_posts/about.md
 
 plugins:
  # - jekyll-feed
@@ -45,9 +44,14 @@ seo:
   title: Ben Fu
   description: Ben Fu 
 
-nav:
-  - label: About
-    page: /about/ 
+# sidebar:
+#   title: "Sample Title"
+#   nav: sidebar-sample  
+
+# nav:
+#   - label: About
+#     page: /about/ 
+    
 
 
 # Exclude from processing.
