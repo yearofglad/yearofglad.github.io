@@ -117,7 +117,7 @@
  */
 .site-footer {
   //border-right: 200px solid $background-color ;
-  border-top: 3px dotted white;
+  border-top: 2px dotted white;
   padding-right: 200px ;
   padding-top: 50px ; 
 }
@@ -193,6 +193,10 @@
   flex: 1;
 }
 
+// .post-date {
+//   : #ffffff ; 
+// }
+
 .page-heading {
   @include relative-font-size(2);
 }
@@ -204,6 +208,7 @@
 .post-list {
   margin-left: 0;
   list-style: none;
+  font-size: 18px ; 
 
   > li {
     margin-bottom: $spacing-unit;
@@ -211,8 +216,9 @@
 }
 
 .post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
+  font-size: 28px;
+  // font-family: "pp_moriregular", sans-serif;
+  color: #000000;
 }
 
 .post-link {
@@ -233,18 +239,31 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  color: #000000 ; 
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
 }
 
+.post-page {
+  background-color: #ffffff ; 
+  color: #ffffff ; 
+}
+
 .post-content {
+
+  // background-color: #ffffff ; 
+
   margin-bottom: $spacing-unit;
+
+  h1 {
+    color: #000000 ; 
+  }
 
   h2 {
     @include relative-font-size(2);
-
+    color: #000000 ; 
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
     }
@@ -252,7 +271,7 @@
 
   h3 {
     @include relative-font-size(1.625);
-
+    color: #000000 ; 
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
     }
@@ -260,9 +279,53 @@
 
   h4 {
     @include relative-font-size(1.25);
-
+    color: #000000 ; 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
   }
+
+  p {
+    color: #000000 ; 
+  }
+}
+
+.about-content {
+
+  margin-top: 30px ;
+  margin-bottom: 360px;
+  margin-right: 200px ; 
+
+  h1 {
+    color: #ffffff ; 
+  }
+
+  h2 {
+    @include relative-font-size(2);
+    color: #ffffff ; 
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+    color: #ffffff ; 
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+    color: #ffffff ; 
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+
+  p {
+    color: #ffffff ; 
+  }
+
 }

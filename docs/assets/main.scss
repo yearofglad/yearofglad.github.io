@@ -13,6 +13,7 @@
     cursor: url('/assets/hovercursor.png'), auto;
 }
 
+
 .element-class:hover {
     cursor: url('/assets/hovercursor.png'), auto;
     text-shadow: 3px 2px 0px #123030 ; 
@@ -42,8 +43,18 @@
     //color: ; 
 }
 
+//firefox compatibility 
+::-moz-selection {
+    background-color: #ea3538 ; 
+    color: #000000 ; 
+    //text-shadow: 3px 2px 0px #000000 ; 
+    //color: ; 
+}
+
 :focus {
     outline: 2px solid #ea3538;
+    text-shadow: 3px 2px 0px #123030 ; 
+
 }
 
 p a {
