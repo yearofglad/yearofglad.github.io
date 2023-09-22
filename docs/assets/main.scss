@@ -22,7 +22,19 @@
 .content-wrapper {
     display: flex;
     align-items: center;  // This vertically centers the text and image if they have different heights.
+    flex-wrap: wrap ; 
 }
+
+// /* Mobile Styles */
+// @media only screen and (max-width: 768px) {
+//   .content-wrapper {
+//     flex-direction: column;
+//   }
+
+//   .right-text {
+//     padding: 16px 8px;
+//   }
+// }
 
 .left-image {
     margin-right: 20px;  // This provides some space between the image and the text.
@@ -155,5 +167,10 @@ h2 {
 }
 
 .chinese-character {
-    font-size: 56px ; 
+  font-size: 56px; // Default size
+  
+  @media only screen and (max-width: 400px) {
+    font-size: 40px;  // Size for small screens
+    display: inline-block; ; 
+  }
 }
