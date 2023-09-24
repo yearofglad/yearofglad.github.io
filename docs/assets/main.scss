@@ -74,6 +74,12 @@ p a {
     text-decoration: underline ; 
 }
 
+p a:hover {
+    color: #123030 ; 
+    text-decoration: underline ; 
+    text-decoration-color: #123030 ; 
+}
+
 //navbar 
 
 /* Remove bullet points from navbar */
@@ -100,7 +106,7 @@ p a {
 }
 
 .site-nav a:hover {
-    color: #ffffff; /* Change this color to whatever you'd like for hover */
+    color: #ffffff; 
     text-shadow: 3px 2px 0px #123030 ; 
     text-decoration: none ; 
 }
