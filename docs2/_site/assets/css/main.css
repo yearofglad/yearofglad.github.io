@@ -1,0 +1,140 @@
+html {
+  background-color: #030314;
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.pt-6 {
+  padding-top: 6.5rem !important;
+}
+
+.pt-7 {
+  padding-top: 7rem !important;
+}
+
+.pt-8 {
+  padding-top: 8rem !important;
+}
+
+.ms-6 {
+  margin-left: 3.9rem !important;
+}
+
+.ps-6 {
+  padding-top: 3.9rem !important;
+}
+
+.me-4_5 {
+  margin-right: 2.5rem !important;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ark Pixel 10px";
+  src: url("../fonts/ark-pixel-10px-proportional-zh_cn.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ark Pixel 12px";
+  src: url("../fonts/ark-pixel-12px-proportional-zh_cn.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HZK Pixel 16px";
+  src: url("../fonts/hzk-pixel-16px.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Redaction 20";
+  src: url("../fonts/Redaction_20-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Redaction 35";
+  src: url("../fonts/Redaction_35-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Redaction 35 Bold";
+  src: url("../fonts/Redaction_35-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Redaction 50";
+  src: url("../fonts/Redaction_50-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Redaction 50 Bold";
+  src: url("../fonts/Redaction_50-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mondwest";
+  src: url("../fonts/ppmondwest-regular-webfont.woff2") format("woff2");
+}
+body {
+  background: #030314;
+  color: #ffffff;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container {
+  z-index: 2;
+}
+
+.home-container {
+  background: #030314;
+  border: 1.5px solid #ffffff;
+  z-index: 2;
+}
+
+.navbar {
+  background-color: #030314 !important;
+  font-family: "Redaction 50 Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2.6rem;
+  z-index: 1;
+  height: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ark Pixel 10px", "HZK Pixel 16px", "GB18030 Bitmap", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2.6rem;
+}
+
+.last-item {
+  position: absolute;
+  right: 8rem;
+}
+
+.arrow {
+  color: #ffffff;
+  font-size: 4rem;
+  font-family: "Mondwest", "HZK Pixel 16px", "GB18030 Bitmap", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.intro {
+  font-family: "Redaction 20";
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+p .introduction {
+  font-size: 1px;
+}
+
+/*# sourceMappingURL=main.css.map */

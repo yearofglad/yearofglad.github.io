@@ -1,0 +1,149 @@
+$backgroundColor: #030314;
+$bodyColor: #ffffff;
+$link-color: $bodyColor;
+$bodyFont: 'Work Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$headerFont: 'Redaction 20', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$navFont: 'Redaction 50 Bold', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$zhFont: 'HZK Pixel 16px', "GB18030 Bitmap", -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,  
+  xl: 1200px,
+  xxl: 1400px
+);
+
+html {
+  background-color: $backgroundColor;
+}
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+$spacer: 1rem;
+.pt-6 { padding-top: $spacer * 6.5 !important; }
+.pt-7 { padding-top: $spacer * 7 !important; }
+.pt-8 { padding-top: $spacer * 8 !important; }
+.ms-6 { margin-left: $spacer * 3.9 !important; }
+.ps-6 { padding-top: $spacer * 3.9 !important; }
+.me-4_5 { margin-right: $spacer * 2.5 !important; }
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
+// Font Import
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Ark Pixel 10px';
+  src: url('../fonts/ark-pixel-10px-proportional-zh_cn.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Ark Pixel 12px';
+  src: url('../fonts/ark-pixel-12px-proportional-zh_cn.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'HZK Pixel 16px';
+  src: url('../fonts/hzk-pixel-16px.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Redaction 20';
+  src: url('../fonts/Redaction_20-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('../fonts/Redaction_35-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Redaction 35 Bold';
+  src: url('../fonts/Redaction_35-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Redaction 50';
+  src: url('../fonts/Redaction_50-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Redaction 50 Bold';
+  src: url('../fonts/Redaction_50-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Mondwest';
+  src: url('../fonts/ppmondwest-regular-webfont.woff2') format('woff2');
+}
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+.container {
+  z-index: 2;
+}
+
+.home-container {
+  background: $backgroundColor;
+  border: 1.5px solid $bodyColor;
+  z-index: 2;
+  // height: 80vh;
+  // width: 80%;
+  // height: 100rem; 
+}
+
+.col {
+  // background-color: #bb33339d !important;
+  // border: 1px solid rgb(19, 226, 205);
+}
+
+.navbar {
+  background-color: $backgroundColor !important;
+  // background-color: #bb33339d !important;
+  font-family: $navFont;
+  font-size: 2.6rem; 
+  z-index: 1;
+  height: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Ark Pixel 10px', $zhFont;
+  font-size: 2.6rem;
+}
+// bruh
+// https://stackoverflow.com/questions/38948102/center-one-and-right-left-align-other-flexbox-element
+.last-item {
+  position:absolute;
+  right: 8rem;
+}
+
+.arrow {
+  color: $bodyColor;
+  font-size: 4rem;
+  font-family: 'Mondwest', $zhFont;
+}
+
+.intro {
+  font-family: 'Redaction 20';
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+p .introduction {
+  font-size: 1px;
+}
+
+
+
