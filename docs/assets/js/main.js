@@ -10,7 +10,6 @@ for (let i = 0; i < btns.length; i++) {
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
-
     }); 
 }
 
@@ -21,3 +20,17 @@ setHomeActive.addEventListener("click", function() {
     }
     btns[1].className += " active";
 });
+
+let activeTarget = window.location.hash.substr(1); 
+if (activeTarget) {
+    for (let i = 0; i < btns.length; i++) {
+        if (btns[i].getAttribute("data-target") === activeTarget) {
+            for (let j = 0; j < btns.length; j++) {
+                btns[j].className = btns[j].className.replace(" active", "");
+            }
+            btns[i].className += " active";
+        }
+    }
+}
+
+
