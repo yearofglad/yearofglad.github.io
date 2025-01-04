@@ -1,4 +1,4 @@
-$backgroundColor: #04041c;
+$backgroundColor: #001011;
 $bodyColor: #ffffff;
 $link-color: $bodyColor;
 $bodyFont: 'Work Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -173,6 +173,7 @@ body {
   font-family: $navFont;
   font-size: 2.4rem; 
   color: #ffffff86;
+  margin-bottom: -0.6rem;
 }
 .active, .nav-item:hover {
   color: $bodyColor;
@@ -188,15 +189,16 @@ body {
 }
 
 .arrow {
-  color: $bodyColor;
-  font-size: 4rem;
+  color: #ffffff86;
+  font-size: 3rem;
   font-family: 'Ark Pixel 16px', $zhFont;
-}
-.child {
-  align-self: flex-end;
+  transition: 0.1s ease-in-out;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
+}
+.arrow:hover {
+  color: $bodyColor;
 }
 .bounce:hover {
   animation-name: bounce;
@@ -204,7 +206,7 @@ body {
 }
 @keyframes bounce {
   0%   { transform: translateY(0); }
-  50%  { transform: translateY(-50px); }
+  50%  { transform: translateY(-100px); }
   100% { transform: translateY(0); }
 }
 

@@ -1,9 +1,9 @@
 html {
-  background-color: #04041c;
+  background-color: #001011;
 }
 
 .spaced {
-  background-color: #04041c;
+  background-color: #001011;
   width: 100%;
   height: 3.5vh;
 }
@@ -112,7 +112,7 @@ a:active {
   src: url("../fonts/ppmondwest-regular-webfont.woff2") format("woff2");
 }
 body {
-  background: #04041c;
+  background: #001011;
   color: #ffffff;
   font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -129,20 +129,20 @@ body {
 }
 
 .home-container {
-  background: #04041c;
+  background: #001011;
   z-index: 2;
   width: 100%;
 }
 
 .home {
   width: 95%;
-  background: #04041c;
+  background: #001011;
   border: 1.5px solid #ffffff;
   height: 90vh;
 }
 
 .navbar {
-  background-color: #04041c !important;
+  background-color: #001011 !important;
   background-color: rgba(187, 51, 51, 0.6156862745) !important;
   font-family: "Redaction 50 Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 2.5rem;
@@ -164,6 +164,7 @@ body {
   font-family: "Redaction 50 Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 2.4rem;
   color: rgba(255, 255, 255, 0.5254901961);
+  margin-bottom: -0.6rem;
 }
 
 .active, .nav-item:hover {
@@ -176,16 +177,17 @@ body {
 }
 
 .arrow {
-  color: #ffffff;
-  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.5254901961);
+  font-size: 3rem;
   font-family: "Ark Pixel 16px", "HZK Pixel 16px", "GB18030 Bitmap", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.child {
-  align-self: flex-end;
+  transition: 0.1s ease-in-out;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
+}
+
+.arrow:hover {
+  color: #ffffff;
 }
 
 .bounce:hover {
@@ -198,7 +200,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-50px);
+    transform: translateY(-100px);
   }
   100% {
     transform: translateY(0);
