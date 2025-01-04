@@ -17,8 +17,29 @@ $grid-breakpoints: (
 html {
   background-color: $backgroundColor;
 }
+
+.spaced {
+  background-color: $backgroundColor;
+  width: 100%;
+  height: 3.5vh;
+}
+
+body {
+  overflow: -moz-scrollbars-horizontal;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 .scrolling-wrapper{
-	overflow-x: auto;
+	overflow-x: scroll;
+  // overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: fit-content;
+}
+.card {
+  display: inline-block;
+  width: 80%;
+  height: 80vh;
 }
 a:link { 
   text-decoration: none; 
@@ -56,6 +77,10 @@ $spacer: 1rem;
   src: url('../fonts/ark-pixel-12px-proportional-zh_cn.woff2') format('woff2');
 }
 @font-face {
+  font-family: 'Ark Pixel 16px';
+  src: url('../fonts/ark-pixel-16px-proportional-latin.woff2') format('woff2');
+}
+@font-face {
   font-family: 'HZK Pixel 16px';
   src: url('../fonts/hzk-pixel-16px.woff2') format('woff2');
 }
@@ -90,17 +115,32 @@ body {
   font-family: $bodyFont;
 }
 
+.bg {
+  background: #08e4005c;
+  border: 1px solid red;
+}
+
 .container {
+  overflow-x: hidden;
+  white-space: nowrap;
   z-index: 2;
+  // background-color: rgba(0, 255, 255, 0.44);
 }
 
 .home-container {
   background: $backgroundColor;
-  border: 1.5px solid $bodyColor;
+  // border: 1.5px solid $bodyColor;
   z-index: 2;
   // height: 80vh;
-  // width: 80%;
+  width: 100%;
   // height: 100rem; 
+}
+
+.home {
+  width: 95%;
+  background: $backgroundColor;
+  border: 1.5px solid $bodyColor;
+  height: 90vh;
 }
 
 .col {
@@ -110,17 +150,34 @@ body {
 
 .navbar {
   background-color: $backgroundColor !important;
-  // background-color: #bb33339d !important;
+  background-color: #bb33339d !important;
   font-family: $navFont;
-  font-size: 2.9rem; 
-  z-index: 1;
-  height: 4.5rem;
+  font-size: 2.5rem; 
+  // z-index: 1;
+  // height: 4.5rem;
 }
 
 .navbar-brand {
+  margin-top: 3.5vh;
   font-family: 'Ark Pixel 10px', $zhFont;
-  font-size: 2.7rem;
+  font-size: 2.8rem;
+  color: $bodyColor;
+  transition: 0.1s ease-in-out;
 }
+
+.navbar-brand:hover {
+  color: #e40058;
+}
+
+.nav-item {
+  font-family: $navFont;
+  font-size: 2.4rem; 
+  color: #ffffff86;
+}
+.active, .nav-item:hover {
+  color: $bodyColor;
+}
+
 // bruh
 // https://stackoverflow.com/questions/38948102/center-one-and-right-left-align-other-flexbox-element
 .last-item {
@@ -133,12 +190,27 @@ body {
 .arrow {
   color: $bodyColor;
   font-size: 4rem;
-  font-family: 'Mondwest', $zhFont;
+  font-family: 'Ark Pixel 16px', $zhFont;
+}
+.child {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.bounce:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
 }
 
 .intro {
   font-family: 'Redaction 20';
-  font-size: 5.5rem;
+  font-size: 5*$spacer;
   margin: 0;
   padding: 0;
 }
