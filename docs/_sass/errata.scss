@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Mori';
+    src: url('../fonts/ppmori-regular-webfont.woff2') format('woff2');
+}
+
+@media (max-width: 928px) {
+    .elementthatmakesstuffgoaway {
+        display: none;
+    }
+}
+
+
+// a .stupid {
+//     color: #ffffff ;
+//     text-decoration: none;
+  
+//     &:visited {
+//       color: #ffffff ;
+//     }
+  
+//     &:hover {
+//       color: white;
+//       text-decoration: underline;
+//       cursor: url('/assets/archive/hovercursor.png'), auto;
+//       //text-shadow: 1px 1px 0px #123030 ; 
+  
+//     }
+  
+//     .social-media-list &:hover {
+//       text-decoration: none;
+  
+//       .username {
+//         text-decoration: underline;
+//       }
+//     }
+// }
