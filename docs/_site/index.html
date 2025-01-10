@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+    <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,29 +14,35 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Ben Fu" />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
-  </head>
-  <body>
-    <main>
-        <div class="home-container">
-            <div class="row">
-                <div class="col-2 h-100">
+</head>
+    <body>
+        <main>
+            <div class="home-container bg">
+                <div class="row d-flex">
+                    <div class="col-2 h-100 bar">
     <div class="d-flex flex-column ms-4 position-fixed">
-        <a class="navbar-brand ms-3" href="/">傅昊</a>
+        <a class="navbar-brand ms-3 fuhao" href="/">傅昊</a>
         <div id="navigator">
-            <a class="nav-item nav-link mt-5 active" href="#home">Home <span class="visually-hidden">(current)</span></a>
-            <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
-            <a class="nav-item nav-link" href="#colophon">Colophon</a>
+            <a class="nav-item nav-link mt-5 active" href="#home" data-target="home">Home <span class="visually-hidden">(current)</span></a>
+            <a class="nav-item nav-link" href="#portfolio" data-target="portfolio">Portfolio</a>
+            <a class="nav-item nav-link" href="#colophon" data-target="colophon">Colophon</a>
             <a class="nav-item nav-link pb-4" href="#">CV</a>
+        </div>
+        <div class="social-media-nav ms-3">
+            <a class="sm-icon me-1" href="https://www.linkedin.com/in/benhfu/" target="_blank"><img src="../assets/images/Linkedin2.png" alt="LinkedIn" width="42" height="42"></a>
+            <a class="sm-icon me-1" href="https://github.com/yearofglad" target="_blank"><img src="../assets/images/Github.png" alt="GitHub" width="42" height="42"></a>
+            <!-- <a class="sm-icon" href="mailto:benhfu@icloud.com" target="_blank"><img src="../assets/images/mail.png" alt="Mail" width="42" height="42"></a> -->
         </div>
     </div>
 </div>
-                <div class="h-100 col">
-                    <!--  -->
-                    <div class="spaced" id="home"></div>
-                    <div class="home container mt-3 me-5">
-                        <div class="row-cols-1 h-100 ms-5 me-5">
-    <div class="col h-75 d-flex w-50 align-items-center">
-        <div class="flex-column d-flex">
+                    <div class="h-100 col bg desktop">
+                        <!--  -->
+                        <div class="spaced bg" id="home"></div>
+                        <div class="boxed col bg h-100">BRUHHHASHJJDHSAJHDSAJHDASJHAHJDSJH</div>
+                        <div class="home container mt-3 me-5">
+                            <div class="row-cols-1 h-100 ms-5 me-5 bg margin-override">
+    <div class="col h-75 d-flex w-50 align-items-center bg">
+        <div class="flex-column d-flex bg">
             <span class="intro mt-auto"></span>
             <span class="intro pt-5">Hi there! I'm Ben.</span>
             <p class="fs-5 text-wrap">I'm a Computer Science & East Asian Studies undergrad at Columbia University in New York. I am interested in how humans interact & interface with computers.</p>
@@ -51,24 +57,41 @@
         <a href="#portfolio"><span class="arrow bounce" id="set-p-active"> v </span></a>                              
     </div>
 </div>
+                        </div>
+                        <!--  -->
+                        <div class="spaced" id="portfolio"></div>
+                        <div class="home container mt-3 me-5">
+                            
+                        </div>
+                        <!--  -->
+                        <div class="spaced" id="colophon"></div>
+                        <div class="home container mt-3 me-5">
+                            
+                        </div>
+                        <div class="spaced mb-5"></div>
+                        <!--  -->
                     </div>
-                    <!--  -->
-                    <div class="spaced" id="portfolio"></div>
-                    <div class="home container mt-3 me-5">
-                        
-                    </div>
-                    <!--  -->
-                    <div class="spaced" id="colophon"></div>
-                    <div class="home container mt-3 me-5">
-                        
-                    </div>
-                    <div class="spaced mb-5"></div>
-                    <!--  -->
                 </div>
-            </div>
+                <div class="mobile row">
+    <nav class="navbar bg-body-tertiary ms-2" style="width: 110vw; border-bottom: 1px solid #ffffff;">
+        <div class="d-flex bg" style="width: 100vw;">
+            <a class="navbar-brand bg ms-2" href="/">傅昊</a>
+            <button class="navbar-toggler ms-auto" style="padding-left:0rem;"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon toggle text-white mt-2 bg" style="height:6rem; line-height:6.5rem; width: 5rem; font-size: 7rem; padding-left:0rem;"> =</span>
+            </button>
         </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="/assets/js/main.js"></script>
-  </body>
+    </nav>
+
+    <div class="container"
+        <div class="row justify-content-center" style="padding-top: 10rem;">
+            <div class="col bg text-center mintro">Hi there! I'm Ben.</div>
+            <div class="col bg text-center text-wrap mintro-text">I'm a Computer Science & East Asian Studies undergrad at Columbia University in New York. I am interested in how humans interact & interface with computers.</div>    
+        </div>   
+    </div>
+</div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="/assets/js/main.js"></script>
+    </body>
 </html>

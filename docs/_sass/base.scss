@@ -1,6 +1,6 @@
-$backgroundColor: #001011;
+$backgroundColor: rgba(0, 16, 17, 1); // rgba for safari rendering? 
 $bodyColor: #ffffff;
-$link-color: $bodyColor;
+$accentColor: #08e400;
 $bodyFont: 'Work Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $headerFont: 'Redaction 20', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $navFont: 'Redaction 50 Bold', -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -11,8 +11,20 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,  
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
+  xxxl: 1800px
 );
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1800px;
+
+.mobile {
+  display: none;
+}
 
 html {
   background-color: $backgroundColor;
@@ -24,23 +36,27 @@ html {
   height: 3.5vh;
 }
 
+.boxed {
+  display:none; 
+}
+
 body {
   overflow: -moz-scrollbars-horizontal;
   overflow-y: hidden;
   overflow-x: hidden;
 }
-.scrolling-wrapper{
-	overflow-x: scroll;
-  // overflow-y: hidden;
-  white-space: nowrap;
-  width: 100%;
-  height: fit-content;
-}
-.card {
-  display: inline-block;
-  width: 80%;
-  height: 80vh;
-}
+// .scrolling-wrapper{
+// 	overflow-x: scroll;
+//   // overflow-y: hidden;
+//   white-space: nowrap;
+//   width: 100%;
+//   height: fit-content;
+// }
+// .card {
+//   display: inline-block;
+//   width: 80%;
+//   height: 80vh;
+// }
 a:link { 
   text-decoration: none; 
 } 
@@ -105,6 +121,10 @@ $spacer: 1rem;
   src: url('../fonts/Redaction_50-Bold.woff2') format('woff2');
 }
 @font-face {
+  font-family: 'Redaction 70';
+  src: url('../fonts/Redaction_70-Regular.woff2') format('woff2');
+}
+@font-face {
   font-family: 'Mondwest';
   src: url('../fonts/ppmondwest-regular-webfont.woff2') format('woff2');
 }
@@ -113,11 +133,6 @@ body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
-}
-
-.bg {
-  background: #08e4005c;
-  border: 1px solid red;
 }
 
 .container {
@@ -143,6 +158,12 @@ body {
   height: 90vh;
 }
 
+@media (max-width: 928px) {
+  .home {
+    width: 100%;
+  }
+}
+
 .col {
   // background-color: #bb33339d !important;
   // border: 1px solid rgb(19, 226, 205);
@@ -150,7 +171,7 @@ body {
 
 .navbar {
   background-color: $backgroundColor !important;
-  background-color: #bb33339d !important;
+  // background-color: #bb33339d !important;
   font-family: $navFont;
   font-size: 2.5rem; 
   // z-index: 1;
@@ -166,7 +187,8 @@ body {
 }
 
 .navbar-brand:hover {
-  color: #e40058;
+  color: #EB5E55;
+  transform: perspective(90000px) rotateY(5deg);
 }
 
 .nav-item {
@@ -179,6 +201,21 @@ body {
   color: $bodyColor;
 }
 
+.nav-social-media {
+  
+}
+
+.sm-icon {
+  opacity: 0.5;
+  width: 1rem;
+  height: 1rem;
+  transition: 0.1s ease-in-out;
+}
+
+.sm-icon:hover {
+  opacity: 1;
+}
+
 // bruh
 // https://stackoverflow.com/questions/38948102/center-one-and-right-left-align-other-flexbox-element
 .last-item {
@@ -186,6 +223,62 @@ body {
   right: 8rem;
   // font-family: 'Redaction ', $zhFont;
   // letter-spacing: 0.1rem;
+}
+
+@media (max-width: 928px) {
+  // .navbar-toggler {
+  //   display: none;
+  //   width: 0;
+  //   height: 0;
+  // }
+  .nav-item {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  // .navbar-brand {
+  //   display: none;
+  //   width: 0;
+  //   height: 0;
+  // }
+  .home {
+    border: none;
+  }
+  .boxed {
+    display: block;
+    background-color: #0017e4;
+    height: 100%;
+    width: 100%;
+  }
+  .margin-override {
+    margin-left:  $spacer * 0;
+    margin-right:  $spacer * 0;
+    display:none;
+  }
+  .bar {
+    display: none;
+  }
+
+  .body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .margin-override {
+    display:none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+.bruh {
+  background-color: rgba(255, 0, 0, 0.6);
 }
 
 .arrow {
@@ -221,5 +314,29 @@ p .introduction {
   font-size: 1px;
 }
 
+// $xs: 0;
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+// $xxl: 1400px;
+
+@media (max-width: $xl) {
+
+  .home {
+    width: 85%
+  }
+}
+
+@media (max-width: $md) {
+
+  .intro {
+    font-size: 3*$spacer;
+  }
+}
+
+.fuhao {
+  cursor: url('../images/fuhao.png'), auto; 
+}
 
 

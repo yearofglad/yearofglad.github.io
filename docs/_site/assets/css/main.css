@@ -1,30 +1,25 @@
+.mobile {
+  display: none;
+}
+
 html {
-  background-color: #001011;
+  background-color: rgb(0, 16, 17);
 }
 
 .spaced {
-  background-color: #001011;
+  background-color: rgb(0, 16, 17);
   width: 100%;
   height: 3.5vh;
+}
+
+.boxed {
+  display: none;
 }
 
 body {
   overflow: -moz-scrollbars-horizontal;
   overflow-y: hidden;
   overflow-x: hidden;
-}
-
-.scrolling-wrapper {
-  overflow-x: scroll;
-  white-space: nowrap;
-  width: 100%;
-  height: fit-content;
-}
-
-.card {
-  display: inline-block;
-  width: 80%;
-  height: 80vh;
 }
 
 a:link {
@@ -108,18 +103,17 @@ a:active {
   src: url("../fonts/Redaction_50-Bold.woff2") format("woff2");
 }
 @font-face {
+  font-family: "Redaction 70";
+  src: url("../fonts/Redaction_70-Regular.woff2") format("woff2");
+}
+@font-face {
   font-family: "Mondwest";
   src: url("../fonts/ppmondwest-regular-webfont.woff2") format("woff2");
 }
 body {
-  background: #001011;
+  background: rgb(0, 16, 17);
   color: #ffffff;
   font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.bg {
-  background: rgba(8, 228, 0, 0.3607843137);
-  border: 1px solid red;
 }
 
 .container {
@@ -129,21 +123,25 @@ body {
 }
 
 .home-container {
-  background: #001011;
+  background: rgb(0, 16, 17);
   z-index: 2;
   width: 100%;
 }
 
 .home {
   width: 95%;
-  background: #001011;
+  background: rgb(0, 16, 17);
   border: 1.5px solid #ffffff;
   height: 90vh;
 }
 
+@media (max-width: 928px) {
+  .home {
+    width: 100%;
+  }
+}
 .navbar {
-  background-color: #001011 !important;
-  background-color: rgba(187, 51, 51, 0.6156862745) !important;
+  background-color: rgb(0, 16, 17) !important;
   font-family: "Redaction 50 Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 2.5rem;
 }
@@ -157,7 +155,8 @@ body {
 }
 
 .navbar-brand:hover {
-  color: #e40058;
+  color: #EB5E55;
+  transform: perspective(90000px) rotateY(5deg);
 }
 
 .nav-item {
@@ -171,9 +170,61 @@ body {
   color: #ffffff;
 }
 
+.sm-icon {
+  opacity: 0.5;
+  width: 1rem;
+  height: 1rem;
+  transition: 0.1s ease-in-out;
+}
+
+.sm-icon:hover {
+  opacity: 1;
+}
+
 .last-item {
   position: absolute;
   right: 8rem;
+}
+
+@media (max-width: 928px) {
+  .nav-item {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .home {
+    border: none;
+  }
+  .boxed {
+    display: block;
+    background-color: #0017e4;
+    height: 100%;
+    width: 100%;
+  }
+  .margin-override {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    display: none;
+  }
+  .bar {
+    display: none;
+  }
+  .body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .margin-override {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+.bruh {
+  background-color: rgba(255, 0, 0, 0.6);
 }
 
 .arrow {
@@ -215,6 +266,50 @@ body {
 
 p .introduction {
   font-size: 1px;
+}
+
+@media (max-width: 1200px) {
+  .home {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .intro {
+    font-size: 3rem;
+  }
+}
+.fuhao {
+  cursor: url("../images/fuhao.png"), auto;
+}
+
+.toggle {
+  font-family: "Mondwest", "HZK Pixel 16px", "GB18030 Bitmap", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 5rem;
+  color: #ffffff;
+  padding: none;
+}
+
+.mintro {
+  font-family: "Redaction 20";
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.mintro-text {
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+@font-face {
+  font-family: "Mori";
+  src: url("../fonts/ppmori-regular-webfont.woff2") format("woff2");
+}
+@media (max-width: 928px) {
+  .elementthatmakesstuffgoaway {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

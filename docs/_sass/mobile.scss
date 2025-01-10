@@ -4,3 +4,16 @@
     color: $bodyColor;
     padding: none;
 }
+
+.mintro {
+    font-family: 'Redaction 20';
+    font-size: 3*$spacer;
+    margin: 0;
+    padding: 0;
+}
+
+.mintro-text {
+    font-size: 1*$spacer;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}

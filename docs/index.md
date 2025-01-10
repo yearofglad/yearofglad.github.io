@@ -1,6 +1,6 @@
 ---
 layout: benfu
-title: "Happy Jekylling!"
+title: Ben Fu
 ---
 
 ## You're ready to go!
