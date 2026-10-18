@@ -15,7 +15,7 @@ html.theme-pink {
   --accent: #{$red};
   --muted: #{$rose};
   --ink: #{$ink};
-  --tile: url('../images/papercuts/floral-tile-pink.svg');
+  --tile: #{"url('../images/papercuts/floral-tile-pink.svg')"};
 }
 
 html.theme-green {
@@ -23,7 +23,7 @@ html.theme-green {
   --accent: #085b0c;
   --muted: rgba(0, 16, 17, 0.41);
   --ink: #09282c;
-  --tile: url('../images/papercuts/floral-tile-green.svg');
+  --tile: #{"url('../images/papercuts/floral-tile-green.svg')"};
 }
 
 *,

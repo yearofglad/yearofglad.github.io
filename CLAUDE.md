@@ -8,6 +8,9 @@ Ben Fu's personal site, used for job hunting and grad school applications. It's 
 - Preview locally before pushing: `cd docs && bundle exec jekyll serve` (port 4000). There's also a `.claude/launch.json` config named `jekyll`.
 - Commit and push to `main` yourself once the user has approved the preview.
 - Don't commit `.DS_Store` or `docs/_site/`. `_site/` is tracked by mistake; leave it unstaged.
+- GitHub Pages builds with its own old toolchain (github-pages gem: Jekyll 3.10 and Ruby Sass 3.7), not the local Gemfile's Jekyll 4 and Dart Sass. Old Sass rejects some modern syntax. For example, a CSS custom property holding `url(...)` has to be interpolated: `--tile: #{"url('...')"};`.
+- Before pushing SCSS changes, compile with Ruby Sass 3.7.4. Install it with `gem install sass -v 3.7.4 --install-dir <scratch>/gems`, then run `sass --load-path docs/_sass` on `main.scss` without its front matter.
+- After a push, check the deploy with `gh run list -L 3`. A failed build leaves the previous version live.
 
 ## Design source: Figma
 
