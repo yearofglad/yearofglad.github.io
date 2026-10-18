@@ -178,7 +178,7 @@ a:focus-visible {
     --pad-top: clamp(24px, 5.15svh, 45px);
     min-height: min(670px, calc(100svh - 120px));
     margin: 0;
-    padding: var(--pad-top) 28px clamp(10px, 2.2svh, 19px) 21px;
+    padding: var(--pad-top) 21px clamp(10px, 2.2svh, 19px);
     overflow: hidden;
   }
 
@@ -201,7 +201,7 @@ a:focus-visible {
   }
 
   .intro {
-    max-width: 353px;
+    max-width: none;
     position: relative; // paint above the BF patch where they overlap
     margin-top: 0;
     font-size: clamp(17px, 2.6svh, 20px);

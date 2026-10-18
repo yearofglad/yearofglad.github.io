@@ -4,7 +4,7 @@
     <meta name="theme-color" content="#f2dedd">
     <title>{% if page.title and page.url != "/" %}{{ page.title }} — {% endif %}Ben Fu</title>
     <meta name="description" content="Ben Fu — MSCS student at Columbia University, interested in technology, HCI, and design.">
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="icon" type="image/png" href="{{ "/assets/favicon/favicon-96x96.png" | relative_url }}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{ "/assets/favicon/favicon.svg" | relative_url }}" />
     <link rel="shortcut icon" href="{{ "/assets/favicon/favicon.ico" | relative_url }}" />
