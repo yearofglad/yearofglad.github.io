@@ -72,7 +72,7 @@ a:focus-visible {
   width: max-content;
   color: $red;
   font-family: $displayFont;
-  font-size: clamp(60px, 8.5vh, 84px);
+  font-size: clamp(72px, 11vh, 108px);
   font-weight: 700;
   line-height: 1.13;
   text-decoration: none;
@@ -115,7 +115,7 @@ a:focus-visible {
   align-items: flex-end;
   padding: 106px 72px 0 32px;
   font-family: $displayFont;
-  font-size: clamp(40px, 3.7vw, 56px);
+  font-size: clamp(32px, 2.8vw, 44px);
   line-height: 1.32;
 
   a {
@@ -168,7 +168,7 @@ a:focus-visible {
 
   .monogram {
     height: 110px;
-    font-size: 64px;
+    font-size: 76px;
   }
 
   .intro {
@@ -195,6 +195,6 @@ a:focus-visible {
     gap: 0 9px;
     padding: 12px 21px 32px;
     line-height: normal;
-    font-size: clamp(28px, 9vw, 36px);
+    font-size: clamp(26px, 8vw, 32px);
   }
 }
