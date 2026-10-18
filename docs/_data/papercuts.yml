@@ -1,0 +1,7 @@
+# Side artwork shown left of the card on desktop (pages pick one with `border:`)
+musicians-border:
+  width: 214
+  height: 892
+pc-691-cats:
+  width: 193
+  height: 281

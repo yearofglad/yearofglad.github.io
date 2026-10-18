@@ -21,29 +21,39 @@ Ben Fu's personal site, used for job hunting and grad school applications. It's 
 
 1. Homepage: done, matches Figma.
 2. 404 page: done. It's `docs/404.html` on `_layouts/bare.html`, styled in `_sass/notfound.scss`. GitHub Pages serves it for any missing URL. `jekyll serve` only picks it up after a restart, so preview it at `/404.html`.
-3. Colophon (`/colophon/`): not started.
+3. Colophon (`docs/colophon.html`, at `/colophon/`): done, green theme. It uses the desktop wording ("Work Sans and Redaction") on mobile as well, because the Mobile Colophon frame only mentions Redaction.
 4. Work (`/work/`): waiting on the finished Figma frame.
 
-The nav already links to `/work/` and `/colophon/`. Those pages don't exist yet, so the links 404.
+The nav already links to `/work/`. That page doesn't exist yet, so the link 404s.
 
 ## Code layout (docs/)
 
-- `_layouts/default.html`: the new design's frame. It holds the musicians paper-cut border, the pink card with the BF monogram, and nav (`_includes/nav.html`, with `aria-current` on the active page). Page content goes inside the card.
+- `_layouts/default.html`: the new design's frame. It holds the side paper-cut art, the themed card with the BF monogram, and nav (`_includes/nav.html`, with `aria-current` on the active page). Page content goes inside the card.
 - `_includes/head.html`: meta tags, favicons and `main.css`. No Bootstrap in the new design.
 - `assets/css/main.scss` imports `_sass/fonts.scss` (@font-face rules) and `_sass/site.scss` (all styles).
 - `index.html`: homepage content (intro paragraphs and the martial-arts paper cut in a `<picture>` with a mobile source).
+- Per-page front matter:
+  - `theme:` is `pink` (default) or `green`. It sets `html.theme-*`, which fills the CSS variables `--bg`, `--accent`, `--muted`, `--ink` and `--tile` in site.scss. It also picks `bf-patch-<theme>.svg`, the little patch behind BF on mobile.
+  - `border:` is the desktop side art (default `musicians-border`). Sizes live in `_data/papercuts.yml`.
+- On the illustration `<picture>`, set `--art-h` and `--art-mh` to the artwork's Figma heights (desktop and mobile). Desktop height scales with the viewport.
+- Tiles are named by color: `floral-tile-pink.svg`, `floral-tile-green.svg`, `floral-tile-red.svg` (404).
 - Breakpoint: below 900px is mobile (`$mobile` in site.scss). Mobile stacks the card on top, with the nav in a patterned band underneath.
 - Desktop sizes scale with viewport height (`vh` in `clamp()`) so the page fits without scrolling on laptops (checked at 1280×720 to 1512×982). Keep that when adding pages.
 - BF monogram is larger than the nav: about 95px vs 42px on a laptop, and 76px vs 32px on mobile.
 
 ## Design tokens
 
-- Colors:
+- Pink theme (home):
   - pink `#f2dedd` (card and page background)
   - red `#ef3e41` (BF, active nav, art)
-  - rose `#db7f8e` (inactive nav, 404 background)
+  - rose `#db7f8e` (inactive nav)
   - ink `#481314` (body text)
-  - 404 numerals `#c31638`
+- Green theme (colophon):
+  - background `#f1f2dd`
+  - accent `#085b0c`
+  - inactive nav `rgba(0,16,17,.41)`
+  - ink `#09282c`
+- 404 page: red panel `#ef3e41` on a rose `#db7f8e` background, numerals `#c31638`
 - Fonts:
   - Work Sans for body text
   - Redaction 10 for display text (BF, nav, 404 numerals)

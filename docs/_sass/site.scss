@@ -7,8 +7,24 @@ $ink: #481314;
 $bodyFont: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 $displayFont: 'Redaction 10', Georgia, "Times New Roman", serif;
 
-$tile: url('../images/papercuts/green-floral-tile.svg');
 $mobile: 899.98px;
+
+// Page themes: pink (home) and green (colophon), set by `theme:` front matter
+html.theme-pink {
+  --bg: #{$pink};
+  --accent: #{$red};
+  --muted: #{$rose};
+  --ink: #{$ink};
+  --tile: url('../images/papercuts/floral-tile-pink.svg');
+}
+
+html.theme-green {
+  --bg: #f1f2dd;
+  --accent: #085b0c;
+  --muted: rgba(0, 16, 17, 0.41);
+  --ink: #09282c;
+  --tile: url('../images/papercuts/floral-tile-green.svg');
+}
 
 *,
 *::before,
@@ -17,12 +33,12 @@ $mobile: 899.98px;
 }
 
 html {
-  background: $pink $tile 0 0 / 509px 982px repeat;
+  background: var(--bg, #{$pink}) var(--tile) 0 0 / 509px 982px repeat;
 }
 
 body {
   margin: 0;
-  color: $ink;
+  color: var(--ink);
   font-family: $bodyFont;
   -webkit-font-smoothing: antialiased;
 }
@@ -33,7 +49,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid $red;
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -52,6 +68,11 @@ a:focus-visible {
   margin: 31px 17px 0 25px;
 }
 
+.site-border--pc-691-cats {
+  height: clamp(200px, 28.6vh, 281px);
+  margin: 56px 22px 0 41px;
+}
+
 .card {
   position: relative;
   display: flex;
@@ -59,7 +80,7 @@ a:focus-visible {
   min-height: calc(100vh - 95px);
   margin: 54px 0 41px;
   padding: 2px 3px 10px 25px;
-  background: $pink;
+  background: var(--bg);
 }
 
 .monogram-patch {
@@ -70,7 +91,7 @@ a:focus-visible {
   position: relative;
   display: block;
   width: max-content;
-  color: $red;
+  color: var(--accent);
   font-family: $displayFont;
   font-size: clamp(72px, 11vh, 108px);
   font-weight: 700;
@@ -104,7 +125,8 @@ a:focus-visible {
     display: block;
     width: auto;
     max-width: 100%;
-    height: clamp(120px, 20vh, 190px);
+    // --art-h / --art-mh are the artwork's Figma heights (desktop / mobile), set on the <picture>
+    height: clamp(calc(var(--art-h) * 0.53px), calc(var(--art-h) * 0.0877vh), calc(var(--art-h) * 0.833px));
   }
 }
 
@@ -119,13 +141,13 @@ a:focus-visible {
   line-height: 1.32;
 
   a {
-    color: $rose;
+    color: var(--muted);
     text-decoration: none;
   }
 
   a:hover,
   a[aria-current="page"] {
-    color: $red;
+    color: var(--accent);
   }
 
   a[aria-current="page"] {
@@ -151,7 +173,7 @@ a:focus-visible {
   }
 
   .card {
-    min-height: 0;
+    min-height: 670px;
     margin: 0;
     padding: 45px 28px 19px 21px;
     overflow: hidden;
@@ -164,6 +186,9 @@ a:focus-visible {
     display: block;
     max-width: none;
     pointer-events: none;
+    // Figma sized the patch (at 79px, 33px in the SVG) for a 64px BF; scale it up for the 76px BF
+    transform: scale(1.19);
+    transform-origin: 79px 33px;
   }
 
   .monogram {
@@ -179,11 +204,10 @@ a:focus-visible {
 
   .illustration {
     align-self: center;
-    margin-top: 0;
     padding-top: 26px;
 
     img {
-      height: 94px;
+      height: calc(var(--art-mh) * 1px);
     }
   }
 

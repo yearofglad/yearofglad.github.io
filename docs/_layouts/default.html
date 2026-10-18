@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+{%- assign theme = page.theme | default: "pink" -%}
+{%- assign border = page.border | default: "musicians-border" -%}
+{%- assign border_size = site.data.papercuts[border] %}
+<html lang="{{ site.lang | default: "en-US" }}" class="theme-{{ theme }}">
   {% include head.html %}
   <body>
     <div class="site">
-      <img class="site-border" src="{{ "/assets/images/papercuts/musicians-border.svg" | relative_url }}" width="214" height="892" alt="">
+      <img class="site-border site-border--{{ border }}" src="{{ "/assets/images/papercuts/" | append: border | append: ".svg" | relative_url }}" width="{{ border_size.width }}" height="{{ border_size.height }}" alt="">
 
       <main class="card">
-        <img class="monogram-patch" src="{{ "/assets/images/papercuts/bf-background.svg" | relative_url }}" width="509" height="982" alt="">
+        <img class="monogram-patch" src="{{ "/assets/images/papercuts/bf-patch-" | append: theme | append: ".svg" | relative_url }}" width="509" height="982" alt="">
         <a class="monogram" href="{{ "/" | relative_url }}" aria-label="Ben Fu — home">BF</a>
         {{ content }}
       </main>
