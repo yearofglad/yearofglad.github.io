@@ -176,7 +176,8 @@ a:focus-visible {
   // on screen without scrolling; at 874px tall they match the Figma frame.
   .card {
     --pad-top: clamp(24px, 5.15svh, 45px);
-    min-height: min(670px, calc(100svh - 120px));
+    // Same height on every page (tall enough for the homepage) so the nav row doesn't move
+    min-height: min(670px, calc(100svh - 96px));
     margin: 0;
     padding: var(--pad-top) 21px clamp(10px, 2.2svh, 19px);
     overflow: hidden;
