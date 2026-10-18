@@ -172,17 +172,21 @@ a:focus-visible {
     display: none;
   }
 
+  // Sizes shrink with the visible screen height (svh) so the nav row is
+  // on screen without scrolling; at 874px tall they match the Figma frame.
   .card {
-    min-height: 670px;
+    --pad-top: clamp(24px, 5.15svh, 45px);
+    min-height: min(670px, calc(100svh - 120px));
     margin: 0;
-    padding: 45px 28px 19px 21px;
+    padding: var(--pad-top) 28px clamp(10px, 2.2svh, 19px) 21px;
     overflow: hidden;
   }
 
   .monogram-patch {
     position: absolute;
-    top: 0;
-    left: -58px;
+    // Offsets center the BF letters (ink box) inside the scaled patch
+    top: calc(var(--pad-top) - 49px);
+    left: -60px;
     display: block;
     max-width: none;
     pointer-events: none;
@@ -192,22 +196,23 @@ a:focus-visible {
   }
 
   .monogram {
-    height: 110px;
+    height: 110px; // patch ends ~94px below the card's top padding; leaves a 16px gap above the text
     font-size: 76px;
   }
 
   .intro {
     max-width: 353px;
+    position: relative; // paint above the BF patch where they overlap
     margin-top: 0;
-    font-size: 20px;
+    font-size: clamp(17px, 2.6svh, 20px);
   }
 
   .illustration {
     align-self: center;
-    padding-top: 26px;
+    padding-top: clamp(12px, 3svh, 26px);
 
     img {
-      height: calc(var(--art-mh) * 1px);
+      height: calc(var(--art-mh) * clamp(0.75px, 0.13svh, 1px));
     }
   }
 

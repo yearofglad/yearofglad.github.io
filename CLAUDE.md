@@ -38,6 +38,7 @@ The nav already links to `/work/`. That page doesn't exist yet, so the link 404s
 - On the illustration `<picture>`, set `--art-h` and `--art-mh` to the artwork's Figma heights (desktop and mobile). Desktop height scales with the viewport.
 - Tiles are named by color: `floral-tile-pink.svg`, `floral-tile-green.svg`, `floral-tile-red.svg` (404).
 - Breakpoint: below 900px is mobile (`$mobile` in site.scss). Mobile stacks the card on top, with the nav in a patterned band underneath.
+- On mobile, sizes shrink with `svh` so the nav row is visible without scrolling on modern phones (checked at 393×659 Safari through 430×739). At 402×874 they match Figma exactly. Old small phones like the SE (375×553) still scroll a little.
 - Desktop sizes scale with viewport height (`vh` in `clamp()`) so the page fits without scrolling on laptops (checked at 1280×720 to 1512×982). Keep that when adding pages.
 - BF monogram is larger than the nav: about 95px vs 42px on a laptop, and 76px vs 32px on mobile.
 
