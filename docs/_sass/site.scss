@@ -1,0 +1,200 @@
+// Colors and type from the "personal site" Figma file
+$pink: #f2dedd;
+$red: #ef3e41;
+$rose: #db7f8e;
+$ink: #481314;
+
+$bodyFont: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$displayFont: 'Redaction 10', Georgia, "Times New Roman", serif;
+
+$tile: url('../images/papercuts/green-floral-tile.svg');
+$mobile: 899.98px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: $pink $tile 0 0 / 509px 982px repeat;
+}
+
+body {
+  margin: 0;
+  color: $ink;
+  font-family: $bodyFont;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-underline-position: from-font;
+}
+
+a:focus-visible {
+  outline: 2px solid $red;
+  outline-offset: 3px;
+}
+
+// Desktop: border | card | nav
+.site {
+  display: grid;
+  grid-template-columns: auto minmax(0, 786px) minmax(max-content, 1fr);
+  min-height: 100vh;
+}
+
+// Sized to the viewport so the whole page fits without scrolling
+.site-border {
+  display: block;
+  width: auto;
+  height: clamp(480px, calc(100vh - 62px), 820px);
+  margin: 31px 17px 0 25px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 95px);
+  margin: 54px 0 41px;
+  padding: 2px 3px 10px 25px;
+  background: $pink;
+}
+
+.monogram-patch {
+  display: none;
+}
+
+.monogram {
+  position: relative;
+  display: block;
+  width: max-content;
+  color: $red;
+  font-family: $displayFont;
+  font-size: clamp(60px, 8.5vh, 84px);
+  font-weight: 700;
+  line-height: 1.13;
+  text-decoration: none;
+}
+
+.intro {
+  max-width: 758px;
+  margin-top: clamp(16px, 3.5vh, 36px);
+  font-size: clamp(18px, min(1.6vw, 2.6vh), 24px);
+  letter-spacing: -0.01em;
+  line-height: normal;
+
+  p {
+    margin: 0 0 1.17em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.illustration {
+  display: block;
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 24px;
+
+  img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: clamp(120px, 20vh, 190px);
+  }
+}
+
+.site-nav {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 106px 72px 0 32px;
+  font-family: $displayFont;
+  font-size: clamp(40px, 3.7vw, 56px);
+  line-height: 1.32;
+
+  a {
+    color: $rose;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a[aria-current="page"] {
+    color: $red;
+  }
+
+  a[aria-current="page"] {
+    text-decoration: underline;
+  }
+}
+
+// Mobile: card on top, nav in a patterned band below
+@media (max-width: $mobile) {
+  html {
+    background-position: -58px 0;
+  }
+
+  .site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .site-border {
+    display: none;
+  }
+
+  .card {
+    min-height: 0;
+    margin: 0;
+    padding: 45px 28px 19px 21px;
+    overflow: hidden;
+  }
+
+  .monogram-patch {
+    position: absolute;
+    top: 0;
+    left: -58px;
+    display: block;
+    max-width: none;
+    pointer-events: none;
+  }
+
+  .monogram {
+    height: 110px;
+    font-size: 64px;
+  }
+
+  .intro {
+    max-width: 353px;
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .illustration {
+    align-self: center;
+    margin-top: 0;
+    padding-top: 26px;
+
+    img {
+      height: 94px;
+    }
+  }
+
+  .site-nav {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0 9px;
+    padding: 12px 21px 32px;
+    line-height: normal;
+    font-size: clamp(28px, 9vw, 36px);
+  }
+}

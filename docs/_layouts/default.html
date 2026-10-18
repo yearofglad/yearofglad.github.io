@@ -2,6 +2,16 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
   <body>
-    {{ content }}
+    <div class="site">
+      <img class="site-border" src="{{ "/assets/images/papercuts/musicians-border.svg" | relative_url }}" width="214" height="892" alt="">
+
+      <main class="card">
+        <img class="monogram-patch" src="{{ "/assets/images/papercuts/bf-background.svg" | relative_url }}" width="509" height="982" alt="">
+        <a class="monogram" href="{{ "/" | relative_url }}" aria-label="Ben Fu — home">BF</a>
+        {{ content }}
+      </main>
+
+      {% include nav.html %}
+    </div>
   </body>
 </html>

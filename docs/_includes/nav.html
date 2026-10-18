@@ -1,0 +1,6 @@
+<nav class="site-nav" aria-label="Main">
+    {%- assign section = page.url | split: "/" | slice: 1 | first %}
+    <a href="{{ "/" | relative_url }}"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>Home</a>
+    <a href="{{ "/work/" | relative_url }}"{% if section == "work" %} aria-current="page"{% endif %}>Work</a>
+    <a href="{{ "/colophon/" | relative_url }}"{% if section == "colophon" %} aria-current="page"{% endif %}>Colophon</a>
+</nav>
