@@ -83,19 +83,24 @@ html.page-404 {
     min-height: 0;
   }
 
+  // Everything below is a fraction of the panel height --h, which is
+  // 670px in the 402x874 Figma frame and shrinks with the visible screen
+  // (svh) so the patterned band stays on screen, like the other pages.
   .notfound-panel {
+    --h: #{"min(670px, calc(100svh - 96px))"};
     width: 100%;
-    height: 670px;
+    height: var(--h);
     min-height: 0;
     border: 0;
     border-bottom: 4px solid $rose;
   }
 
   .notfound-code {
-    top: 287.5px;
-    font-size: 300px;
-    line-height: 250px;
-    letter-spacing: -9px;
+    top: calc(var(--h) * 0.4291);              // 287.5px
+    font-size: calc(var(--h) * 0.4478);        // 300px
+    line-height: 0.8333;                       // 250px
+    letter-spacing: -0.03em;                   // -9px
+    transform: translate(calc(-50% - 5.5px), -50%);
 
     span {
       display: block;
@@ -103,8 +108,9 @@ html.page-404 {
   }
 
   .notfound-title {
-    top: 378px;
-    font-size: 52px;
+    top: calc(var(--h) * 0.5642);              // 378px
+    font-size: calc(var(--h) * 0.0776);        // 52px
+    transform: translate(calc(-50% - 0.5px), -50%);
 
     span {
       display: block;
@@ -112,7 +118,8 @@ html.page-404 {
   }
 
   .notfound-home {
-    top: 617px;
-    font-size: 36px;
+    top: calc(var(--h) * 0.9209);              // 617px
+    font-size: calc(var(--h) * 0.0537);        // 36px
+    transform: translate(calc(-50% - 5.5px), -50%);
   }
 }

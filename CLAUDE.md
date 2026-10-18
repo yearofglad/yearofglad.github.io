@@ -23,7 +23,7 @@ Ben Fu's personal site, used for job hunting and grad school applications. It's 
 ## Build order and status
 
 1. Homepage: done, matches Figma.
-2. 404 page: done. It's `docs/404.html` on `_layouts/bare.html`, styled in `_sass/notfound.scss`. GitHub Pages serves it for any missing URL. `jekyll serve` only picks it up after a restart, so preview it at `/404.html`.
+2. 404 page: done. It's `docs/404.html` on `_layouts/bare.html`, styled in `_sass/notfound.scss`. GitHub Pages serves it for any missing URL. `jekyll serve` only picks it up after a restart, so preview it at `/404.html`. On mobile, every position and font size is a fraction of the panel height (`--h`, the same `min(670px, 100svh - 96px)` as the other pages' cards), so it matches the 404 Mobile frame exactly at 402×874 and scales down evenly on shorter screens.
 3. Colophon (`docs/colophon.html`, at `/colophon/`): done, green theme. It uses the desktop wording ("Work Sans and Redaction") on mobile as well, because the Mobile Colophon frame only mentions Redaction.
 4. Work (`/work/`): waiting on the finished Figma frame.
 
