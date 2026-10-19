@@ -1,6 +1,6 @@
-# benfu.dev
+# benfu.page
 
-Ben Fu's personal site, used for job hunting and grad school applications. It's a Jekyll site in `docs/`, served by GitHub Pages at benfu.dev (`docs/CNAME`; the domain was benhfu.com until Oct 2026). The domain is registered at Porkbun. Pushing to `main` deploys right away.
+Ben Fu's personal site, used for job hunting and grad school applications. It's a Jekyll site in `docs/`, served by GitHub Pages at benfu.page (`docs/CNAME`; the domain was benhfu.com until Oct 2026, briefly benfu.dev). The domain is registered at Porkbun. Pushing to `main` deploys right away.
 
 ## Workflow
 
